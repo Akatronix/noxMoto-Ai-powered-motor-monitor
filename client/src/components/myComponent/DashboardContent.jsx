@@ -843,7 +843,7 @@ const DashboardContent = () => {
       className={`min-h-screen ${COLORS.bg} p-6 text-gray-100 font-sans selection:bg-blue-500/30`}
     >
       {/* Header */}
-      <div className="flex justify-between items-center mb-8">
+      {/* <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-2xl font-black tracking-tighter text-white flex items-center gap-3">
             noxMoto
@@ -855,7 +855,7 @@ const DashboardContent = () => {
         </div>
         <div className="flex items-center gap-4">
           <div className="flex items-center bg-[#151921] rounded-xl border border-gray-800 p-1">
-            <button
+            <button 
               onClick={() => setActiveTab("dashboard")}
               className={`px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all ${
                 activeTab === "dashboard"
@@ -876,7 +876,54 @@ const DashboardContent = () => {
               <Brain className="w-3 h-3" />
               AI Analysis
             </button>
-          </div>
+          </div> */}
+
+
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4 mb-8">
+  <div>
+    <h1 className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 text-white">
+      <span className="text-xl sm:text-2xl font-black tracking-tighter">
+        noxMoto
+      </span>
+
+      <span className="hidden sm:block h-4 w-px bg-gray-800" />
+
+      <span className="text-gray-500 text-[10px] sm:text-xs font-bold uppercase tracking-widest">
+        Motor Intelligence v2.0
+      </span>
+    </h1>
+  </div>
+
+  <div className="w-full lg:w-auto">
+    <div className="flex w-full lg:w-auto bg-[#151921] rounded-xl border border-gray-800 p-1">
+      <button
+        onClick={() => setActiveTab("dashboard")}
+        className={`flex-1 lg:flex-none px-3 sm:px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all ${
+          activeTab === "dashboard"
+            ? "bg-gray-700 text-white"
+            : "text-gray-500 hover:text-gray-300"
+        }`}
+      >
+        Dashboard
+      </button>
+
+      <button
+        onClick={() => setActiveTab("ai")}
+        className={`flex-1 lg:flex-none px-3 sm:px-4 py-2 rounded-lg text-[10px] font-black uppercase tracking-widest transition-all flex items-center justify-center gap-2 ${
+          activeTab === "ai"
+            ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
+            : "text-gray-500 hover:text-gray-300"
+        }`}
+      >
+        <Brain className="w-3 h-3" />
+        AI Analysis
+      </button>
+    </div>
+  </div>
+</div>
+
+
+      
 
           <div className="flex items-center gap-3 bg-[#151921] px-4 py-2 rounded-xl border border-gray-800">
             <div className="relative flex h-2 w-2">
