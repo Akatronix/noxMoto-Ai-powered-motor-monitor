@@ -302,18 +302,18 @@ const UserSettings = () => {
       warningActive: vibrationWarning,
       hasData: hasBackendData,
     },
-    {
-      key: "flow",
-      label: "Flow Rate Limit",
-      icon: Droplets,
-      colorHex: COLORS.flow,
-      unit: "L/min",
-      description: "Maximum flow rate threshold",
-      currentReading: sensorFlow,
-      maxLimit: params.flow, // Dynamic Max Value from Database
-      warningActive: flowWarning,
-      hasData: hasBackendData,
-    },
+    // {
+    //   key: "flow",
+    //   label: "Flow Rate Limit",
+    //   icon: Droplets,
+    //   colorHex: COLORS.flow,
+    //   unit: "L/min",
+    //   description: "Maximum flow rate threshold",
+    //   currentReading: sensorFlow,
+    //   maxLimit: params.flow, // Dynamic Max Value from Database
+    //   warningActive: flowWarning,
+    //   hasData: hasBackendData,
+    // },
   ];
 
   return (
